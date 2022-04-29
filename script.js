@@ -54,11 +54,12 @@ const slider = document.querySelector('.slider-container');
 let mySwiper;
 
 function mobileSlider() {
-   if (window.innerWidth < 700 && slider.dataset.mobile == 'false') {
+   if (window.innerWidth < 600 && slider.dataset.mobile == 'false') {
       mySwiper = new Swiper(slider, {
+         slidesPerView: 'auto',
          spaceBetween: 16,
-         slideClass: 'link-row__item',
          loop: true,
+         slideClass: 'link-row__item',
          pagination: {
             el: '.swiper-pagination',
          },
@@ -67,7 +68,7 @@ function mobileSlider() {
       slider.dataset.mobile = 'true';
    }
 
-   if (window.innerWidth > 700) {
+   if (window.innerWidth > 600) {
       slider.dataset.mobile = 'false';
       if (slider.classList.contains('swiper-container-initialized')) {
          mySwiper.destroy();

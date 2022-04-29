@@ -77,7 +77,7 @@ html {
    padding: 16px 32px;
 }
 
-@media (max-width: 420px) {
+@media (max-width: 396px) {
    .main__title {
       min-height: 80px;
       padding: 16px;
@@ -173,7 +173,6 @@ html {
    }
 
    .slider-container .swiper-wrapper {
-      justify-content: space-between;
       flex-wrap: nowrap;
    }
 
